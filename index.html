@@ -23,7 +23,7 @@
       font-size: 2.5rem;
     }
     section {
-      padding: 2rem 1rem;
+      padding: 0.5rem 1rem;
       max-width: 1000px;
       margin: auto;
     }
@@ -39,49 +39,78 @@
   }
 
   .gallery img {
-    max-width: 300px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
-  }
+      max-width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+      margin: 5px;
+      cursor: pointer;
+    }
 
-  .gallery img:hover {
-    transform: scale(1.05);
-  }
-    footer {
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+footer {
       background-color: #d2691e;
       color: #fff;
       text-align: center;
       padding: 1rem;
       margin-top: 2rem;
     }
-    .contact {
-      background-color: #fff;
-      border: 1px solid #c0c0c0;
-      padding: 1rem;
-    }
-    .contact label {
-      display: block;
+
+    .button-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       margin-top: 1rem;
     }
-    .contact input, .contact textarea {
+
+    .button-img {
+      width: auto;
+      max-width: 300px;
+      height: auto;
+      border-radius: 5px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .button-img:hover {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      padding-top: 50px;
+      left: 0;
+      top: 0;
       width: 100%;
-      padding: 0.5rem;
-      margin-top: 0.25rem;
-      border: 1px solid #ccc;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
     }
-    .contact button {
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      background-color: #d2691e;
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 8px;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
       color: #fff;
-      border: none;
+      font-size: 40px;
       cursor: pointer;
     }
-    .contact button:hover {
-      background-color: #a0522d;
-    }
   </style>
+
 </head>
 <body>
   <header>
@@ -92,35 +121,129 @@
   <section>
     <h2>Historical Info</h2>
     <p>This is a BSA m21 600cc 1949 (JVB54) motorcycle with sidecar.</p>
-
+    <p>Vehicle Details</p>
+    <p>Model: BSA M21</p>
+    <p>Engine: 600cc side-valve single-cylinder</p>
+    <p>The BSA M21 was renowned for its durability and torque, making it a popular choice for 
+      both civilian and military applications during and after World War II. Its robust construction 
+      and torque-rich engine made it ideal for sidecar applications, which is likely why it was selected 
+      for use in period dramas and films.</p>
   </section>
 
   <section>
     <h2>TV Appearances</h2>
-    <h3>Dad's Army</h3>
-    <p>This motorcycle appeared in multiple episodes as listed below
+    <h3>Dad’s Army (1968–1977)</h3>
+    <p>In this iconic British sitcom set during World War II, the BSA M21 JVB54 is featured in several episodes. 
+      Its use aligns with the show's wartime setting, providing an authentic touch to the Home Guard's portrayal.
       <li>The Captain's Car, Series 5 - Episode 11 and was First broadcast: 8th December 1972</li>
       <li>Gorilla Warfare, Series 5 - Episode 10 and was First broadcast: 1st December 1972</li>
       <li>Everybody's Trucking, Series 9 - Episode 1 and was First Broadcast 2nd November 1977 </li>
     </p>
     
-    <h3>On The Buses</h3>
-    <p>Featured in the classic 1971 film On the Buses, there's a memorable scene featuring a motorcycle 
-      with a sidecar. In this scene, Arthur (Michael Robbins) drives the motorcycle, with his wife Olive 
-      (Anna Karen) seated in the sidecar. The motorcycle used is a 1949 BSA M21. This particular scene is 
-      well-known for its comedic elements, especially when Olive experiences a mishap involving the sidecar.</p>
+    <h3>On the Buses (1971 film)</h3>
+    <p>eatured in the classic 1971 film adaptation of the popular TV series On the Buses, 
+      a memorable scene showcases a 1949 BSA M21 motorcycle with a sidecar. In this scene, 
+      Arthur (played by Michael Robbins) drives the motorcycle while his wife Olive (Anna Karen) rides in the sidecar. 
+      he motorcycle’s inclusion adds to the comedic and period-specific ambiance of the film, with the scene particularly 
+      well-known for its humor, especially when Olive experiences a mishap involving the sidecar.</p>
   </section>
 
   <section>
-    <h2>Gallery</h2>
+    <h2></h2>
     <div class="gallery">
-        <img src="https://lh3.googleusercontent.com/d/1y1wRjLDTLbHjk7VALsuodHStxJWF7UmG" alt="Before">
+      <a href="https://www.flickr.com/photos/28083135@N06/14916629851/#comment72157719467546641" target="_blank">
+        <img src="https://i.imgur.com/bOUwK3Y.png" alt="Image 1">
+      </a>
     </div>
   </section>
-  
+
+  <section>
+    <h2>Restoration Gallery</h2>
+    <div class="gallery">
+      <img src="https://i.imgur.com/mByZmM6.jpeg" alt="Image 1">
+      <img src="https://i.imgur.com/5vsTbRP.jpeg" alt="Image 2">
+      <img src="https://i.imgur.com/D7jn4NO.jpeg" alt="Image 3">
+      <img src="https://i.imgur.com/LdAXzaJ.jpeg" alt="Image 4">
+      <img src="https://i.imgur.com/I23qSDL.jpeg" alt="Image 5">
+      <img src="https://i.imgur.com/zEptrCe.jpeg" alt="Image 6">
+      <img src="https://i.imgur.com/gysn2b8.jpeg" alt="Image 7">
+      <img src="https://i.imgur.com/gBxhDCm.jpeg" alt="Image 8">
+      <img src="https://i.imgur.com/Z82GrXt.jpeg" alt="Image 9">
+      <img src="https://i.imgur.com/mKgjlpJ.jpeg" alt="Image 10">
+      <img src="https://i.imgur.com/1GgzudG.jpeg" alt="Image 11">
+      <img src="https://i.imgur.com/G27t3Xv.jpeg" alt="Image 12">
+      <img src="https://i.imgur.com/soFhsN8.jpeg" alt="Image 13">
+      <img src="https://i.imgur.com/AviYBoW.jpeg" alt="Image 14">
+      <img src="https://i.imgur.com/J7tMevi.jpeg" alt="Image 15">
+      <img src="https://i.imgur.com/xAZJn0J.jpeg" alt="Image 16">
+      <img src="https://i.imgur.com/zemfAVs.jpeg" alt="Image 17">
+      <img src="https://i.imgur.com/6uDcCrD.jpeg" alt="Image 18">
+      <img src="https://i.imgur.com/Bbm2iLP.jpeg" alt="Image 19">
+      <img src="https://i.imgur.com/HU5iF3r.jpeg" alt="Image 20">
+  </div>
+
+  <section>
+    <h2>TV/Film Gallery</h2>
+    <div class="gallery">
+      <img src="https://i.imgur.com/VeEHwfz.png" alt="Image 1">
+      <img src="https://i.imgur.com/CyqSebt.png" alt="Image 2">
+      <img src="https://i.imgur.com/NnA5XmS.png" alt="Image 3">
+      <img src="https://i.imgur.com/UtvNjGs.png" alt="Image 3">
+      <img src="https://i.imgur.com/Ocukgh1.png" alt="Image 3">
+      <img src="https://i.imgur.com/vi58LGd.png" alt="Image 3">
+      <img src="https://i.imgur.com/OrejfGm.png" alt="Image 3">
+      <img src="https://i.imgur.com/vxYJ3lq.png" alt="Image 3">
+      <img src="https://i.imgur.com/0tLyz3S.png" alt="Image 3">
+      <img src="https://i.imgur.com/H9yMiiG.png" alt="Image 3">
+      <img src="https://i.imgur.com/K25VEk4.png" alt="Image 3">
+      <img src="https://i.imgur.com/OiF9HV1.png" alt="Image 3">
+      <img src="https://i.imgur.com/9ffueXY.png" alt="Image 3">
+      <img src="https://i.imgur.com/pFpnSCX.png" alt="Image 3">
+      <img src="https://i.imgur.com/xBy940K.png" alt="Image 3">
+      <img src="https://i.imgur.com/sWHAFWk.jpeg" alt="Image 3">
+      <img src="https://i.imgur.com/NhbO6nk.jpeg" alt="Image 3">
+      <img src="https://i.imgur.com/HRMkLZ0.jpeg" alt="Image 3">
+
+  </div>
+
+  <section class="button-section">
+    <a href="https://dadsarmythetford.org.uk/" target="_blank">
+      <img src="https://i.imgur.com/B2VYXCx.png" alt="Dad's Army Museum Thetford" class="button-img">
+    </a>
+  </section>  
+
+<!-- Modal for enlarged image -->
+<div id="imgModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+</div>
 
   <footer>
-    &copy; 2025 Motorcycle Showcase | All Rights Reserved
+    &copy; 2025 Paul Reynolds | All Rights Reserved
   </footer>
+
+  <script>
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("img01");
+    const images = document.querySelectorAll('.gallery img');
+    const closeBtn = document.querySelector('.close');
+
+    images.forEach(img => {
+      img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+      };
+    });
+
+    closeBtn.onclick = function() {
+      modal.style.display = "none";
+    };
+
+    window.onclick = function(event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
 </body>
 </html>
